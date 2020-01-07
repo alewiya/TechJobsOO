@@ -42,7 +42,7 @@ namespace TechJobs.Data
         public List<Job> FindByValue(string value)
         {
             var results = from j in Jobs
-                          where j.Employer.Contains(value)
+                          where j.Employer.Contains(value) 
                           || j.Location.Contains(value)
                           || j.Name.ToLower().Contains(value.ToLower())
                           || j.CoreCompetency.Contains(value)
