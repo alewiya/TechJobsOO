@@ -23,7 +23,7 @@ namespace TechJobs.ViewModels
         public int CoreCompetencyId { get; set; }
         [Required]
         [Display(Name = "Position Type")]
-        public int positionTypesId { get; }
+        public int PositionTypesId { get; set; }
         // TODO #3 - Included other fields needed to create a job,
         // with correct validation attributes and display names.
 
@@ -66,7 +66,8 @@ namespace TechJobs.ViewModels
             }
             foreach (PositionType field in jobData.PositionTypes.ToList())
             {
-                PositionTypes .Add(new SelectListItem
+                PositionTypes 
+                    .Add(new SelectListItem
                 {
                     Value = field.ID.ToString(),
                     Text = field.Value
